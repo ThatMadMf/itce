@@ -1,0 +1,66 @@
+- model: Economics.expenses
+  pk: 1
+  fields:
+    name: Количество сырья(тн)
+    value: 1000.0000
+    short_name: СырьеКоличество
+- model: Economics.expenses
+  pk: 2
+  fields:
+    name: Цена приобретения 1 тонны сырья (грн)
+    value: 1080.0000
+    short_name: СырьеЦена
+- model: Economics.expenses
+  pk: 3
+  fields:
+    name: Оплата услуг эспедиторов (грн/тн)
+    value: 120.0000
+    short_name: УслугиЭксп
+- model: Economics.expenses
+  pk: 4
+  fields:
+    name: Ставка по налогу на прибыль
+    value: 0.3000
+    short_name: СтавкаНалогПрибыль
+- model: Economics.expenses
+  pk: 5
+  fields:
+    name: Ставка по НСД
+    value: 0.2000
+    short_name: СтавкаНСД
+- model: Economics.expenses
+  pk: 6
+  fields:
+    name: Ставка процентов за кредит
+    value: 0.0300
+    short_name: ПроцентКредит
+- model: Economics.expenses
+  pk: 7
+  fields:
+    name: Банковские расходы (конвертация) (%)
+    value: 0.0050
+    short_name: БанкРасходы
+- model: Economics.expenses
+  pk: 8
+  fields:
+    name: Ставка налога с оборота
+    value: 0.0100
+    short_name: НалогОборот
+- model: Economics.expenses
+  pk: 9
+  fields:
+    name: Таможеные расходы
+    value: 0.0050
+    short_name: ТаможРасходы
+- model: Economics.expenses
+  pk: 10
+  fields:
+    name: Курс (грн/$)
+    value: 10.0000
+    short_name: Курс
+- model: Economics.expenses
+  pk: 11
+  fields:
+    name: Цена реализации 1 тонны сырья($)
+    value: 120.0000
+    short_name: СырьеРеализация

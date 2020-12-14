@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:10.13
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - 2234:5432
+    env_file:
+      - db.env
+
+  api:
+    build: .
+    command:
+      bash -c "python manage.py migrate
+      && python manage.py loaddata Economics/fixtures/*
+      && gunicorn server.wsgi:application --bind 0.0.0.0:8000"
+    container_name: api
+    volumes:
+      - .:/code
+    ports:
+      - 8000:8000
+    env_file:
+      - server.env
+    depends_on:
+      - db
+
+  vue-ui:
+    build:
+      context: ./client
+      dockerfile: ./Dockerfile
+    ports:
+      - "8080:8080"
+    container_name: vue-ui
+
+volumes:
+  postgres_data:
