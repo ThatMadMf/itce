@@ -16,9 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from Economics.views import Estimates
+from Economics.views import Estimates, ActionList
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('calculate', Estimates.as_view())
+    path('calculate', Estimates.as_view()),
+    path('table', ActionList.as_view())
 ]

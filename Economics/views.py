@@ -4,7 +4,8 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from Economics.models import Expense
+from Economics.models import Expense, AccountAction
+from Economics.serializers import AccountActionSerializer
 
 
 class Estimates(APIView):
@@ -82,3 +83,14 @@ class Estimates(APIView):
         impl = self.get_db('СырьеРеализация')
 
         return Response(self.calc_expenses(impl), status.HTTP_200_OK)
+
+
+class ActionList(APIView):
+    model = AccountAction
+    serializer = AccountActionSerializer
+
+    def get(self, request):
+        data = self.model.objects.all()
+        serializer = self.serializer(instance=data, many=True)
+
+        return Response(serializer.data, status.HTTP_200_OK)
