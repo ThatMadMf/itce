@@ -20,6 +20,11 @@ const routes: Array<RouteConfig> = [
         name: 'calculate-zero-profitability',
         component: () => import('../views/TheZeroProfitability.vue'),
     },
+    {
+      path: '/table',
+      name: 'table',
+      component: () => import('../views/TheTableView.vue'),
+    },
 ];
 
 const router = new VueRouter({

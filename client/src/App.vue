@@ -3,7 +3,8 @@
     <div id="nav">
       <router-link to="/calculate"> Посчитать </router-link> |
       <router-link to="/calculate-max-sale"> Максимальная точка цены реализации </router-link> |
-      <router-link to="/calculate-zero-profitability"> Точка нулевой рентабельности </router-link>
+      <router-link to="/calculate-zero-profitability"> Точка нулевой рентабельности </router-link> |
+      <router-link to="/table"> Таблица </router-link>
     </div>
     <router-view/>
   </div>

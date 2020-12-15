@@ -34,7 +34,6 @@ export default {
     }
   },
   mounted() {
-    console.log(this.args);
     ApiService.get(this.endpoint, {params: this.args})
       .then((result) => {
           let arr = [];
